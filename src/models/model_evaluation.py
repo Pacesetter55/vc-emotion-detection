@@ -75,7 +75,7 @@ def main():
     """Main function to orchestrate model evaluation."""
     model_path = 'model.pkl'
     test_data_path = './data/features/test_features.csv'
-    metrics_output_path = 'metrics.json'
+    metrics_output_path = 'reports/metrics.json'
 
     try:
         # Load the model
