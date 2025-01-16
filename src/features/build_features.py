@@ -3,7 +3,7 @@ import yaml
 import logging
 import numpy as np
 import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 from typing import Tuple
 
 # Configure logging
@@ -51,7 +51,7 @@ def apply_bow(
         X_test = test_data['content'].values
         y_test = test_data['sentiment'].values
 
-        vectorizer = CountVectorizer(max_features=max_features)
+        vectorizer = TfidfVectorizer(max_features=max_features)
         X_train_bow = vectorizer.fit_transform(X_train)
         X_test_bow = vectorizer.transform(X_test)
 
